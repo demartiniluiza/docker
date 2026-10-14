@@ -13,7 +13,8 @@ class TarefaController extends Controller
      */
     public function index()
     {
-        return "OK";
+        $tarefas = Tarefa::all();
+        return response()->json($tarefas);
     }
 
     /**
